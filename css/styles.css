@@ -240,7 +240,8 @@ img {
 
 @media screen and (min-width: 768px) {
   .header-container {
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -326,11 +327,14 @@ img {
 
 .address-list {
   display: flex;
-  align-items: center;
-  gap: 40px;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .address-list__link {
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.03em;
   font-style: normal;
 }
 
@@ -501,8 +505,6 @@ margin-right: 120px; */
   flex-direction: column;
   align-items: center;
 }
-/* display: flex;
-gap: 24px; */
 
 .footer-subscribe-form input {
   width: 100%;
@@ -518,6 +520,37 @@ gap: 24px; */
 
 .footer-subscribe-form__button-icon {
   fill: currentColor;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+    padding-right: 106px;
+    padding-left: 106px;
+  }
+
+  .footer-container__col.footer-container__col--contacts,
+  .footer-container__col.footer-container__col--logo,
+  .footer-container__col.footer-container__col--subscribe {
+    align-items: flex-start;
+  }
+
+  .footer__text {
+    max-width: 264px;
+  }
+
+  .footer-subscribe-form {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .footer-subscribe-form .input {
+    width: 264px;
+    margin-bottom: 0;
+  }
 }
 
 .hero-section {
@@ -611,6 +644,10 @@ gap: 24px; */
   .advantages-list {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 24px;
+  }
+
+  .advantages-list__item-title {
+    text-align: left;
   }
 }
 
@@ -746,10 +783,6 @@ gap: 24px; */
   column-gap: 24px;
   row-gap: 16px;
   margin-bottom: 48px;
-}
-
-.filter-list .button {
-  padding: 8px 16px;
 }
 
 .portfolio-card-list {
@@ -907,15 +940,15 @@ gap: 24px; */
     grid-template-columns: repeat(3, 168px);
     column-gap: 24px;
   }
-
-  .customer-logo {
-    padding: 16px 32px;
-  }
 }
 
 @media screen and (min-width: 1158px) {
   .customers-list {
     grid-template-columns: repeat(6, 168px);
+  }
+
+  .customer-logo {
+    padding: 16px 32px;
   }
 }
 
