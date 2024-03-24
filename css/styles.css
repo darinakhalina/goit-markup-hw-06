@@ -538,16 +538,6 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .footer-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 24px;
-    row-gap: 72px;
-    padding-right: 106px;
-    padding-left: 106px;
-  }
-
   .footer-container__col.footer-container__col--contacts,
   .footer-container__col.footer-container__col--logo,
   .footer-container__col.footer-container__col--subscribe {
@@ -569,13 +559,27 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 24px;
+    row-gap: 72px;
+    padding-right: 106px;
+    padding-left: 106px;
+  }
+}
+
 @media screen and (min-width: 1158px) {
   .footer-container {
+    flex-direction: row;
     justify-content: flex-start;
     flex-wrap: nowrap;
     justify-content: flex-start;
     padding-left: 16px;
     padding-right: 16px;
+    gap: 0;
   }
 
   .footer-container__col.footer-container__col--logo {
@@ -926,14 +930,11 @@ img {
   }
 
   .filter-list {
-    justify-content: center;
     margin-bottom: 72px;
   }
 
   .portfolio-card-list {
     grid-template-columns: repeat(3, 360px);
-    column-gap: 24px;
-    justify-content: center;
   }
 }
 
@@ -996,7 +997,7 @@ img {
   }
 
   .customer-logo {
-    padding: 1px 32px;
+    padding: 14px 32px;
   }
 }
 
